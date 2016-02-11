@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a156a79-11ca-470c-b7e2-da265c7ee50d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW_1_1.py" afterPath="$PROJECT_DIR$/HW_1_1.py" />
     </list>
     <ignored path="ML_Assignment1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="HW_1_1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HW_1_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.36">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -362,7 +361,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455225852305</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="HW">
+      <created>1455226372632</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1455226372632</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -421,7 +426,8 @@
     <MESSAGE value="Here is the sample for hw1" />
     <MESSAGE value="Here is the sample" />
     <MESSAGE value="Here is the sample1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Here is the sample1" />
+    <MESSAGE value="HW" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -480,8 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW_1_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.36">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
