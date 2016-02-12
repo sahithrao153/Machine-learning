@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a156a79-11ca-470c-b7e2-da265c7ee50d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svar-set3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svar-set4.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW_1_1.py" afterPath="$PROJECT_DIR$/HW_1_1.py" />
     </list>
     <ignored path="ML_Assignment1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/HW_1_1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.12">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -71,6 +70,7 @@
         <option value="$PROJECT_DIR$/svar-set2.dat.txt" />
         <option value="$PROJECT_DIR$/svar-set3.dat.txt" />
         <option value="$PROJECT_DIR$/HW_1_1.py" />
+        <option value="$PROJECT_DIR$/svar-set4.dat.txt" />
       </list>
     </option>
   </component>
@@ -435,7 +435,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455234659780</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="svar3">
+      <created>1455236332460</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1455236332460</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -513,7 +519,8 @@
     <MESSAGE value="HW" />
     <MESSAGE value="file read" />
     <MESSAGE value="file read uncommented title" />
-    <option name="LAST_COMMIT_MESSAGE" value="file read uncommented title" />
+    <MESSAGE value="svar3" />
+    <option name="LAST_COMMIT_MESSAGE" value="svar3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -578,10 +585,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/svar-set4.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HW_1_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
