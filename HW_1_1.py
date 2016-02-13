@@ -1,12 +1,18 @@
 import numpy as np
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 #X,Y is to load data from the given dataset
-X,Y = np.loadtxt('svar-set3.dat', unpack=True, usecols=[0,1])
-plot.plot(X,Y,"o")
-plot.xlabel("X")
-plot.ylabel("Y")
-plot.title("Linear regression")
-plot.show()
+lm = LinearRegression()
+X,Y = np.loadtxt('svar-set2.dat', unpack=True, usecols=[0,1])
+lm.fit(X[:,np.newaxis],Y)
+plt.scatter(X,Y)
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("Linear regression")
+plt.plot(X, lm.predict(X[:,np.newaxis]), color='brown')
+plt.show()
+
+
 
 
 
