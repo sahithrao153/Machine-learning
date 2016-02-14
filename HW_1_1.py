@@ -1,52 +1,47 @@
-'''import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.cross_validation import train_test_split
-from sklearn.linear_model import LinearRegression
-
-lm = LinearRegression()
-X,Y = np.loadtxt('svar-set2.dat', unpack=True, usecols=[0,1])
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.25, random_state=42)
-coef = np.polyfit(X_test,Y_test,4)
-poly_func = np.poly1d(coef,variable="x")
-ys = poly_func(X_test)
-plt.xlabel("X")
-plt.ylabel("Y")
-plt.scatter(X_test,Y_test)
-plt.plot(X_test,ys,color='red')
-plt.show()
-'''
-from numpy import loadtxt, zeros, ones
-from pylab import plot,title, xlabel, ylabel
-
-
-#Evaluate the linear regression
 def cost_function(X, y, theta):
-    m = y.size
-    predictions = X.dot(theta).flatten()
-    square_Errors = (predictions - y) ** 2
-    J = (1.0 / (2 * m)) * square_Errors.sum()
-    return J
+    m = float(X.shape[0])
+    cost = (1./(2.*m))*(X*theta-y).T*(X*theta-y)
+    return cost.flat[0]
+
+def gradient(X, y, theta, iter, alpha):
+    theta_iter = [] #record theta for each iteration
+    cost_iter = []  #record cost for each iteration
+    m = float(X.shape[0])
+
+    for i in range(iter):
+        #update theta
+        theta = theta-(alpha/m)*X.T*(X*theta-y)
+        theta_iter.append(theta)
+        cost_iter.append(cost_function(X,y,theta))
+
+    return(theta, theta_iter, cost_iter)
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+#load data
+data = np.loadtxt('svar-set2.dat')
+
+#set initial variables
+x = np.ones(data.shape)
+x[:,1] = data[:,0]
+y = np.zeros(shape=(data.shape[0],1))
+y[:,0] = data[:,1]
+theta = np.matrix([[0.],[0.]])
+alpha = 0.03
+iter = 100000
+
+#gradient descent
+theta, theta_iter, cost_iter = gradient(x, y, theta, iter, alpha)
+
+#plot result
+result = x*theta
+plt.plot(data[:,0], result)
+plt.scatter(data[:,0], data[:,1], marker='o', c='r')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()
 
 
-data = loadtxt('svar-set1.dat')
 
 
-plot(data[:, 0], data[:, 1], marker='o', c='b')
-title('Single variable')
-xlabel('X')
-ylabel('Y')
-
-X = data[:, 0]
-y = data[:, 1]
-
-#training data size
-m = y.size
-
-#Adding ones to X (interception data)
-it = ones(shape=(m, 2))
-it[:, 1] = X
-#Initialize theta parameters
-theta = zeros(shape=(2, 1))
-
-#compute and display initial cost
-print cost_function(it, y, theta)
