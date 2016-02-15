@@ -1,47 +1,36 @@
-def cost_function(X, y, theta):
-    m = float(X.shape[0])
-    cost = (1./(2.*m))*(X*theta-y).T*(X*theta-y)
-    return cost.flat[0]
-
-def gradient(X, y, theta, iter, alpha):
-    theta_iter = [] #record theta for each iteration
-    cost_iter = []  #record cost for each iteration
-    m = float(X.shape[0])
-
-    for i in range(iter):
-        #update theta
-        theta = theta-(alpha/m)*X.T*(X*theta-y)
-        theta_iter.append(theta)
-        cost_iter.append(cost_function(X,y,theta))
-
-    return(theta, theta_iter, cost_iter)
-
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cross_validation import train_test_split
 
-#load data
-data = np.loadtxt('svar-set2.dat')
+files_list = ['svar-set1.dat','svar-set2.dat','svar-set3.dat','svar-set4.dat']
+print 'files list is :\n',files_list
+f_index = int(raw_input('enter the filename index from the list from 1 to 4 '))
+degree_poly = int(raw_input('enter the degree of the polynomial from 1 to n '))
+X,Y = np.loadtxt(files_list[f_index-1], unpack=True, usecols=[0,1])
 
-#set initial variables
-x = np.ones(data.shape)
-x[:,1] = data[:,0]
-y = np.zeros(shape=(data.shape[0],1))
-y[:,0] = data[:,1]
-theta = np.matrix([[0.],[0.]])
-alpha = 0.03
-iter = 100000
 
-#gradient descent
-theta, theta_iter, cost_iter = gradient(x, y, theta, iter, alpha)
+def split_test_data(x,y):
+    X_train, X_test, Y_train, Y_test = train_test_split(x,y,test_size=0.25, random_state=42)
+    coef = np.polyfit(X_test,Y_test,degree_poly)
+    poly_func = np.poly1d(coef,variable="x")
+    ys = poly_func(X_test)
+    plt.xlabel("X")
+    plt.ylabel("Y")
+    plt.scatter(X_test,Y_test)
+    plt.plot(X_test,ys,color='green')
+    plt.show()
 
-#plot result
-result = x*theta
-plt.plot(data[:,0], result)
-plt.scatter(data[:,0], data[:,1], marker='o', c='r')
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.show()
+def cross_valid_k():
+    print "k"
 
+def find_MSE():
+    print "MSE"
+
+split_test_data(X,Y)
+
+cross_valid_k()
+
+find_MSE()
 
 
 
